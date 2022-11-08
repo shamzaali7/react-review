@@ -1,16 +1,15 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-function ToDoList({todos, setTodo}){
+function ToDoList({setTodo, setTodos, todos}){
     return(
                 <div >
-                    {todos.map(element => {
+                    {todos.map((element, id)=> {
                     return (
                         <div className="singles">
                             <span className="boxTodo">
-                            <ToDoItem todo={element} setTodo={setTodo}/>
+                            <ToDoItem key={id} id={id} todos={todos} setTodos={setTodos} todo={element} setTodo={setTodo}/>
                             </span>
-                            <span className="boxMark">Mark as Complete</span>
                         </div>
                     )})}
                 </div>

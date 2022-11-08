@@ -1,15 +1,17 @@
 import React from 'react';
 
-function ToDoItem({todo, setTodo}){
+function ToDoItem({todo, todos, id, setTodos}){
+
     function handleClick(){
-        setTodo({
-            completed: true
-        })
+        console.log(todos)
+        todos[id]={todo: todo.todo, completed: !todo.completed}
+        setTodos([...todos]);
     }
 
     return(
-        <div>
-            <span onClick={handleClick}>{todo.todo}</span>
+        <div >
+            <span>{todo.todo}</span>
+            <span onClick={handleClick} className={todo.completed ? "boxMark complete" : "boxMark"}>Mark as Complete</span>
         </div>
     )
 }

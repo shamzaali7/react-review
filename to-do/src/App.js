@@ -10,8 +10,8 @@ function App() {
     todo: " ",
     completed: false
   });
-
   const [todos, setTodos] = useState([])
+
   return (
     <div>
       <ToDoForm todo={todo} todos={todos} setTodos={setTodos} setTodo={setTodo}/>

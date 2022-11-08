@@ -55,3 +55,6 @@ code {
   margin: 5px;
 }
 
+.boxMark.complete{
+  text-decoration: line-through;
+}
